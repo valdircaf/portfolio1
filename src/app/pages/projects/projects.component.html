@@ -1,0 +1,20 @@
+<section class="container-fluid d-flex flex-column align-items-center justify-content-center">
+    <h1 class="border-text title-source">PROJETOS</h1>
+    <div class="cards d-flex flex-wrap align-items-center justify-content-center">
+        <div class="card" *ngFor="let project of projectsArr">
+            <app-card-projects 
+                (isShowBigCard)="toggleBigCard()" 
+                [cardImg]="project.mainCardImage" 
+                [cardTitle]="project.name" 
+                [descriptions]="project.descriptions" 
+                [videoUrl]="project.video"
+                [tecIcons]="project.technologies"
+                [subtitle]="project.subtitle"
+                >
+
+            </app-card-projects>
+        </div>
+    </div>
+</section>
+
+<div class="pointer-events" *ngIf="isShowBigCard" [ngClass]="{'pointer-events': isShowBigCard}"></div>

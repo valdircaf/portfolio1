@@ -1,0 +1,31 @@
+<section class="container-fluid">
+    <div class="card" *ngIf="!showBigCard" (click)="toggleBigCard()">
+        <img [src]="cardImg" alt="Imagem do Card">
+        <div class="presentation d-flex flex-column align-items-center justify-content-center">
+            <h1 class="title-card-project">{{cardTitle}}</h1>
+            <h2 class="subtitle-card-project">{{subtitle}}</h2>
+            <div class="tec-icons d-flex gap-3">
+                <div class="icons" *ngFor="let icons of tecIcons">
+                    <img [src]="icons" alt="Tecnologias">
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="bigCard" *ngIf="showBigCard">
+        <div class="close-button">
+            <button class="button btn" (click)="toggleBigCard()">
+                <img src="../../../assets/img/Close-button.svg" alt="">
+            </button>
+        </div>
+        <div class="texts d-flex flex-column gap-3">
+            <h1 class="text-center title-card-project border-text">{{cardTitle}}</h1>
+            <p *ngFor="let description of descriptions" class="subtitle-card-project">{{description}}</p>
+        </div>
+        <div class="video">
+            <video [src]="videoUrl" autoplay controls></video>
+        </div>
+    </div>
+</section>
+
+

@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+}
+
+.border-text{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFF;
+    color: transparent;
+}
+
+.title-source{
+    font-size: 75px;
+}
+
+.title-card-project{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.subtitle-card-project{
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff83;
+}
+
+.red-color{
+    color: #FF0000;
+}

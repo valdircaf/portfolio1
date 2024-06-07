@@ -1,0 +1,121 @@
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.container-fluid{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000;
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../../assets/img/astronauta.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 40%;
+    z-index: 0;
+    animation: float 5s ease-in-out infinite;
+}
+
+.all{
+    z-index: 1;
+}
+
+.greetings{
+    font-size: 24px;
+}
+
+.span{
+    color: transparent !important;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFF;
+    background: linear-gradient(to bottom, transparent, #a1c8ff);
+    -webkit-background-clip: text;
+}
+
+.first-title{
+    font-size: 120px;
+    font-weight: 900;
+    
+}
+
+.border-text{
+    font-size: 144px;
+    font-weight: 900;
+    color: transparent;
+    line-break: auto;
+}
+
+@media (max-width: 831px) {
+    .container-fluid{
+        width: 90%;
+    }
+
+    .all{
+        align-items: center !important;
+    }
+
+    .social{
+        flex-wrap: wrap;
+        align-items: center !important;
+        justify-content: center;
+        gap: 0 !important;
+    }
+
+    .links img{
+        width: 25px;
+    }
+
+    .border-text{
+        font-size: 86px;
+    }
+
+    .first-title{
+       font-size: 65px
+    }
+
+    .background{
+        left: -80px !important;
+    }
+}
+
+@media (max-width: 1300px) {
+    .background{
+        left: -130px;
+    }
+}
+
+@media (max-width: 525px) {
+    .border-text{
+        font-size: 65px;
+    }
+
+    .first-title{
+       font-size: 45px
+    }
+
+    .social{
+        flex-direction: column !important;
+    }
+
+    .background{
+        background-position: bottom;
+        left: 0 !important;
+        background-size: 80%;
+    }
+}
