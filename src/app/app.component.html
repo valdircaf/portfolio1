@@ -1,5 +1,8 @@
-<section class="container-fluid" [ngClass]="{'showBigCard': isShowBigCard}">
-    <app-home></app-home>
-    <app-projects (toggleShowBigCard)="toggleShowBigCard()"></app-projects>
-    <app-skills></app-skills>
+<section class="container-fluid" [ngClass]="{'showBigCard': isShowBigCard}" id="fullpage">
+    <app-home class="home"></app-home>
+    <div class="rest">
+        <app-about-me class="about"></app-about-me>
+        <app-projects (toggleShowBigCard)="toggleShowBigCard()" class="projects"></app-projects>
+        <!-- <app-skills class="skills"></app-skills> -->
+    </div>
 </section>

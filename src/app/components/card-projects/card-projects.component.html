@@ -1,30 +1,13 @@
-<section class="container-fluid">
-    <div class="card" *ngIf="!showBigCard" (click)="toggleBigCard()">
-        <img [src]="cardImg" alt="Imagem do Card">
-        <div class="presentation d-flex flex-column align-items-center justify-content-center">
-            <h1 class="title-card-project">{{cardTitle}}</h1>
-            <h2 class="subtitle-card-project">{{subtitle}}</h2>
-            <div class="tec-icons d-flex gap-3">
-                <div class="icons" *ngFor="let icons of tecIcons">
-                    <img [src]="icons" alt="Tecnologias">
-                </div>
+<section class="container-fluid d-flex align-items-center justify-content-center mt-5" [class.animateContainer]="dinamicClass === false && activeIndex !== 0" [class.animateContainer2]="dinamicClass === true && activeIndex !== 0">
+    <div class="d-flex align-items-center justify-content-center mt-5 gap-5 card-container">
+        <div class="texts d-flex flex-column justify-content-center">
+            <h1 class="">{{cardTitle}}</h1>
+            <p class="description" *ngFor="let description of descriptions">{{description}}</p>
+            <div  class="d-flex gap-3">
+                <img [src]="technology" alt="" *ngFor="let technology of tecIcons">
             </div>
         </div>
-    </div>
- 
-    <div class="bigCard" *ngIf="showBigCard">
-        <div class="close-button">
-            <button class="button btn" (click)="toggleBigCard()">
-                <img src="../../../assets/img/Close-button.svg" alt="">
-            </button>
-        </div>
-        <div class="texts d-flex flex-column gap-3">
-            <h1 class="text-center title-card-project border-text">{{cardTitle}}</h1>
-            <p *ngFor="let description of descriptions" class="subtitle-card-project">{{description}}</p>
-        </div>
-        <div class="video">
-            <video [src]="videoUrl" autoplay controls></video>
-        </div>
+        <img [src]="cardImg" alt="Imagem do card" class="card-img">
     </div>
 </section>
 

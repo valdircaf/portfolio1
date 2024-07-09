@@ -1,16 +1,20 @@
 <section class="container-fluid">
-    <carousel [interval]="5000" [showIndicators]="true" class="carousel-inner">
-        <slide class="carousel-item">
-            <div>
-                <h1>Test</h1>
-                <h2>Test</h2>
-            </div>
-        </slide>
-        <slide class="carousel-item">
-            <div>
-                <h1>testando</h1>
-                <h2>testando</h2>
-            </div>
-        </slide>
-    </carousel>
+    <div id="carouselExample" class="carousel slide d-flex align-items-center jusity-content-center">
+        <div class="carousel-inner d-flex align-items-center jusity-content-center">
+          <div class="carousel-item active">
+            <app-card-skills [img]="angularSkill.img" [text]="angularSkill.text" [title]="angularSkill.title"></app-card-skills>
+          </div>
+          <div class="carousel-item" *ngFor="let skill of skills">
+            <app-card-skills [img]="skill.img" [text]="skill.text" [title]="skill.title"></app-card-skills>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 </section>

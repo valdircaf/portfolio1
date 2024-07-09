@@ -1,0 +1,41 @@
+.container-fluid{
+    background-color: #FFF;
+    padding: 0 30px;
+    min-height: 100vh;
+}
+
+.paragraph{
+    width: 40%;
+    font-weight: 600;
+}
+
+.links a{
+    transition: all .2s;
+}
+
+.links a:hover{
+    transition: all .2s;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1100px) {
+    .paragraph{
+        width: 100% !important;
+    }
+
+    .container-fluid{
+        gap: 30px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .container-fluid{
+        gap: 30px !important;
+        flex-direction: column !important;
+        padding: 30px;
+    }
+
+    .right-side img{
+        width: 300px !important;
+    }
+}

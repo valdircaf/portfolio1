@@ -6,4 +6,5 @@ export interface ProjectInterface {
     video: string,
     mainCardImage: string,
     subtitle: string
+    backgroundImg?: string
 }

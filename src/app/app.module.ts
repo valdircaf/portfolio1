@@ -7,7 +7,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardProjectsComponent } from './components/card-projects/card-projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SkillsComponent } from './pages/skills/skills.component';
-import { CarouselModule } from 'ngx-bootstrap/carousel'
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CardSkillsComponent } from './components/card-skills/card-skills.component';
+import { AboutMeComponent } from './pages/about-me/about-me.component'
+
+// import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,14 @@ import { CarouselModule } from 'ngx-bootstrap/carousel'
     ProjectsComponent,
     HomeComponent,
     CardProjectsComponent,
-    SkillsComponent
+    SkillsComponent,
+    CardSkillsComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

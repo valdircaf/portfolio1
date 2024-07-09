@@ -6,6 +6,19 @@
     width: 100%;
 }
 
+.rest{
+    z-index: 1000;
+    position: absolute;
+    top: 100vh;
+}
+
+.home{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
 .showBigCard{
     overflow: hidden !important;
     height: 100vh;

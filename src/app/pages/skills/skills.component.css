@@ -1,16 +1,49 @@
 .container-fluid{
-    margin-top: 200px;
+    /* margin-top: 200px; */
     height: 100vh;
     width: 100%;
     background-image: url("../../../assets/img/bg-skills.svg");
     background-size: cover;
-    background-position: center;
+    background-position: right center;
 }
 
-.carousel-inner {
-    transition: transform 0.5s !important;
-}
-  
 .carousel-item {
     transition: transform 0.5s !important;
+}
+
+.carousel-inner{
+    /* background-color: red !important; */
+    transition: transform 0.5s !important;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.carousel{
+    width: 40% !important;
+}
+
+@media (max-width: 1750px) {
+    .carousel{
+        width: 40% !important;
+    }
+}
+
+@media (max-width: 1500px) {
+    .carousel{
+        width: 100% !important;
+    }
+
+    .container-fluid{
+        background-position: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .carousel{
+        width: 100% !important;
+    }
+
+    .container-fluid{
+        background-position: center;
+    }
 }

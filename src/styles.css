@@ -1,14 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~fullpage.js/dist/fullpage.min.css';
+
+html,body{
+    scroll-behavior: smooth;
+}
 
 *{
     margin: 0;
     padding: 0;
     color: #FFF;
+    font-family: "Poppins", sans-serif;
 }
 
 .border-text{
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #FFF;
+    color: transparent;
+}
+
+.border-text-black{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
     color: transparent;
 }
 

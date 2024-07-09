@@ -1,19 +1,11 @@
-<section class="container-fluid d-flex flex-column align-items-center justify-content-center">
+<section class="container-fluid d-flex flex-column align-items-center justify-content-center pt-3" (wheel)="onScroll($event)">
     <h1 class="border-text title-source">PROJETOS</h1>
-    <div class="cards d-flex flex-wrap align-items-center justify-content-center">
-        <div class="card" *ngFor="let project of projectsArr">
-            <app-card-projects 
-                (isShowBigCard)="toggleBigCard()" 
-                [cardImg]="project.mainCardImage" 
-                [cardTitle]="project.name" 
-                [descriptions]="project.descriptions" 
-                [videoUrl]="project.video"
-                [tecIcons]="project.technologies"
-                [subtitle]="project.subtitle"
-                >
-
-            </app-card-projects>
+    <div class="cards d-flex flex-wrap align-items-center justify-content-center" #el>
+        <button class="before btn-regular btn" (click)="previousPage()">antes</button>
+        <div class="card" *ngFor="let project of projectsArr; let i = index" [class.active]="i === activeIndex">
+            <app-card-projects [cardTitle]="project.name" [cardImg]="project.mainCardImage" [descriptions]="project.descriptions" [tecIcons]="project.technologies" [dinamicClass]="animateCard" [activeIndex]="activeIndex" [cardBackground]="project.backgroundImg"></app-card-projects>
         </div>
+        <button class="after btn-regular btn" (click)="nextPage()">depois</button>
     </div>
 </section>
 

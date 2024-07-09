@@ -1,21 +1,70 @@
 .pointer-events{
-    background-color: #000000a2;
+    /* background-color: #000000a2; */
     width: 100%;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     pointer-events: none !important;
-    z-index: 500;
+    z-index: 1001;
 }
 
-.card{
-    background-color: transparent;
+.cards {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
-.cards{
-    gap: 300px;
-    margin-top: 100px;
-    
+.card {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.5s;
+  opacity: 0;
+  transform: translateY(100vh);
+  animation: showCard .5s;
 }
 
+.active {
+  opacity: 1;
+  transform: translateY(0);
+  background-color: transparent;
+  /* border: 1px solid #FFF; */
+}
+
+.container-fluid{
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("src\assets\img\bg.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+}
+
+button{
+  background-color: red;
+}
+
+.before{
+  position: absolute;
+  left: 10px;
+  z-index: 1001;
+  display: none;
+}
+
+.after{
+  display: none;
+  position: absolute;
+  right: 10px;
+}
+
+@media (max-width: 900px){
+  .before, .after{
+    display: flex;
+  }
+}

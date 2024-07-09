@@ -13,17 +13,18 @@ export class CardProjectsComponent {
   @Input() videoUrl: string = "";
   @Input() tecIcons!: string[];
   @Input() subtitle!: string;
+  @Input() dinamicClass!: boolean;
+  @Input() activeIndex!: number;
+  @Input() cardBackground?: string = "";
 
   showBigCard: boolean = false;
   @Output() isShowBigCard = new EventEmitter<boolean>();
 
-
   constructor(){
-
   }
 
   ngOnInit(){
-
+    console.log(this.dinamicClass);
   }
 
   toggleBigCard() {

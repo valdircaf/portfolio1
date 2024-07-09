@@ -10,6 +10,13 @@ export class AppComponent {
 
   isShowBigCard: boolean = false;
 
+  config: any;
+  fullpageApi: any;
+
+  constructor(){
+     // for more details on config options please visit fullPage.js docs
+  }
+
   toggleShowBigCard(){
     this.isShowBigCard = !this.isShowBigCard;
   }
