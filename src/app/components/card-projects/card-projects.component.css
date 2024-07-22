@@ -12,6 +12,11 @@
     width: 60%;
 }
 
+.technology-container{
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
 .technology{
     width: 35px;
 }
@@ -35,6 +40,7 @@ h1{
 
 .card-img{
     width: 600px;
+    margin-left: -20px;
 }
 
 .animateText{

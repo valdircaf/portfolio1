@@ -3,7 +3,7 @@
         <div class="texts d-flex flex-column justify-content-center">
             <h1 class="">{{cardTitle}}</h1>
             <p class="description" *ngFor="let description of descriptions">{{description}}</p>
-            <div  class="d-flex gap-3">
+            <div  class="d-flex technology-container gap-3">
                 <img [src]="technology" alt="" *ngFor="let technology of tecIcons" class="technology">
             </div>
         </div>
