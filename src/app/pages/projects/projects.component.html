@@ -1,11 +1,15 @@
 <section class="container-fluid d-flex flex-column align-items-center justify-content-center pt-3" (wheel)="onScroll($event)">
     <h1 class="border-text title-source">PROJETOS</h1>
     <div class="cards d-flex flex-wrap align-items-center justify-content-center" #el>
-        <button class="before btn-regular btn" (click)="previousPage()">antes</button>
+        <button class="before btn-regular btn" (click)="previousPage()"><span class="material-symbols-outlined">
+            arrow_back_ios
+            </span></button>
         <div class="card" *ngFor="let project of projectsArr; let i = index" [class.active]="i === activeIndex">
             <app-card-projects [cardTitle]="project.name" [cardImg]="project.mainCardImage" [descriptions]="project.descriptions" [tecIcons]="project.technologies" [dinamicClass]="animateCard" [activeIndex]="activeIndex" [cardBackground]="project.backgroundImg"></app-card-projects>
         </div>
-        <button class="after btn-regular btn" (click)="nextPage()">depois</button>
+        <button class="after btn-regular btn" (click)="nextPage()"><span class="material-symbols-outlined">
+            arrow_forward_ios
+            </span></button>
     </div>
 </section>
 

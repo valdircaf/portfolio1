@@ -3,6 +3,25 @@
 
 html,body{
     scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+        width: 15px; /* Largura da barra de rolagem */
+    }
+    
+    /* Personalizar o fundo da barra de rolagem */
+    ::-webkit-scrollbar-track {
+        background: #000000; 
+    }
+    
+    /* Personalizar a cor da barra de rolagem */
+    ::-webkit-scrollbar-thumb {
+        background: #ffffff; 
+        border-radius: 6px; /* Deixar as bordas arredondadas */
+    }
+    
+    /* Personalizar a cor da barra de rolagem quando em estado de hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #ffffff; 
+    }
 }
 
 *{

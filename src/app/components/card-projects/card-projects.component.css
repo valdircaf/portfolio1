@@ -4,11 +4,20 @@
     height: 80vh;
     border-radius: 10px;
     background-color: #0b0b0b76;
+    
     /* box-shadow: 0px 0px 5px 1px  #FFF; */
 }
 
 .texts{
     width: 60%;
+}
+
+.technology{
+    width: 35px;
+}
+
+.technology:hover{
+    transform: scale(1.1);
 }
 
 h1{
@@ -42,7 +51,28 @@ h1{
     }
 
     .container-fluid{
-        height: 100%;
+        min-height: 80vh;
+        width: 90%;
+    }
+
+    h1{
+        font-size: 35px !important;
+    }
+
+    .texts{
+        width: 90%;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+    }
+
+    .card-img{
+        width: 200px !important;
+    }
+
+    .card-container{
+        padding-left: 30px;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
     }
 }
 

@@ -44,6 +44,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1000;
+    padding: 20px 0;
 }
 
 button{
@@ -63,8 +64,37 @@ button{
   right: 10px;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 @media (max-width: 900px){
   .before, .after{
     display: flex;
+    background-color: transparent;
+  }
+
+  .card{
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+    /* justify-content: center; */
+  }
+
+  .cards{
+    margin-left: 20px;
+    width: 100%;
   }
 }

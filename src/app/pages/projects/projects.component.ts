@@ -1,13 +1,11 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { ProjectInterface } from 'src/app/interfaces/projects/project-interface';
 import { ProjectsServiceService } from 'src/app/services/projects/projects-service.service';
-import {MatIconModule} from '@angular/material/icon';
-
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements AfterViewInit{
   @ViewChild("el") divElement!: ElementRef<HTMLDivElement>;
@@ -41,7 +39,7 @@ export class ProjectsComponent implements AfterViewInit{
       for(let project of response){
         this.titles.push(project.name);
       }
-      console.log(response)
+      // console.log(response)
     })
   }
 
@@ -54,7 +52,6 @@ export class ProjectsComponent implements AfterViewInit{
     if (this.isScrolling) return;
 
     this.isScrolling = true;
-    this.isAnimateCard();
 
     if(this.activeIndex === 1){
       window.document.body.style.overflow = "scroll";
@@ -62,8 +59,6 @@ export class ProjectsComponent implements AfterViewInit{
     }else if(this.activeIndex === (this.projectsArr.length - 1)){
       this.animateCard = false;
     }
-
-    console.log(this.activeIndex)
 
     if (event.deltaY > 0) {
       this.nextPage();
@@ -83,14 +78,17 @@ export class ProjectsComponent implements AfterViewInit{
   }
 
   nextPage(): void {
-    if (this.activeIndex < this.projectsArr.length - 1) {
+    if (this.activeIndex < this.projectsArr.length - 1 && this.activeIndex <= 6) {
       this.activeIndex++;
+      this.isAnimateCard();
     }
+
   }
 
   previousPage(): void {
     if (this.activeIndex > 0) {
       this.activeIndex--;
+      this.isAnimateCard();
     }
   }
 

@@ -1,121 +1,146 @@
 @keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-.container-fluid{
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    background-color: #000;
-}
-
-.background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url("../../../assets/img/astronauta.png");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 40%;
-    z-index: 0;
-    animation: float 5s ease-in-out infinite;
-}
-
-.all{
-    z-index: 1;
-}
-
-.greetings{
-    font-size: 24px;
-}
-
-.span{
-    color: transparent !important;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #FFF;
-    background: linear-gradient(to bottom, transparent, #a1c8ff);
-    -webkit-background-clip: text;
-}
-
-.first-title{
-    font-size: 120px;
-    font-weight: 900;
+@keyframes showGreetings {
     
 }
 
-.border-text{
-    font-size: 144px;
-    font-weight: 900;
-    color: transparent;
-    line-break: auto;
+.container-fluid {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
 }
 
-@media (max-width: 831px) {
-    .container-fluid{
-        width: 100%;
-    }
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../../assets/img/astronauta.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 30%;
+  z-index: 0;
+  animation: float 5s ease-in-out infinite;
+}
 
-    .all{
-        align-items: center !important;
-    }
+.all {
+  position: relative;
+  z-index: 1;
+  /* background-color: red; */
+}
 
-    .social{
-        flex-wrap: wrap;
-        align-items: center !important;
-        justify-content: center;
-        gap: 0 !important;
-    }
+.span {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  background: linear-gradient(to bottom, transparent, #a1c8ff);
+  -webkit-background-clip: text;
+}
 
-    .links img{
-        width: 25px;
-    }
+.first-title {
+  font-size: 130px;
+  font-weight: 900;
+  text-align: center !important;
+}
 
-    .border-text{
-        font-size: 86px;
-    }
+.greetings {
+    font-size: 24px;
+    /* position: absolute; */
+    right: 0;
+    top: 10px;
+    text-align: center !important;
+  }
 
+.border-text {
+  font-size: 144px;
+  font-weight: 900;
+  color: transparent;
+  line-break: auto;
+}
+
+@media (max-width: 931px) {
+  .container-fluid {
+    width: 100%;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding: 10px !important;
+  }
+
+  .all {
+    align-items: center !important;
+    text-align: center !important;
+    margin-top: 60px;
+  }
+
+  .links img {
+    width: 25px;
+  }
+
+  .border-text {
+    font-size: 86px;
+  }
+
+  .first-title {
+    font-size: 65px !important;
+  }
+
+  .background {
+    left: -80px !important;
+    background-size: 100% !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .background {
+    left: -20px;
+  }
+
+  .first-title{
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 400px){
     .first-title{
-       font-size: 65px
-    }
-
-    .background{
-        left: -80px !important;
-    }
-}
-
-@media (max-width: 1300px) {
-    .background{
-        left: -130px;
+        font-size: 45px !important;
     }
 }
 
 @media (max-width: 525px) {
-    .border-text{
-        font-size: 65px;
-    }
+  .border-text {
+    font-size: 65px;
+  }
 
-    .first-title{
-       font-size: 45px
-    }
+  .first-title {
+    font-size: 45px;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    background: linear-gradient(to bottom, transparent, #a1c8ff);
+    -webkit-background-clip: text;
+  }
 
-    .social{
-        flex-direction: column !important;
-    }
+  .social {
+    flex-direction: column !important;
+  }
 
-    .background{
-        background-position: bottom;
-        left: 0 !important;
-        background-size: 80%;
-    }
+  .background {
+    background-position: bottom;
+    left: 0 !important;
+    background-size: 130% !important;
+  }
 }

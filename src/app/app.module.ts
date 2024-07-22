@@ -11,8 +11,6 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CardSkillsComponent } from './components/card-skills/card-skills.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component'
 
-// import {MatIconModule} from '@angular/material/icon';
-
 @NgModule({
   declarations: [
     AppComponent,

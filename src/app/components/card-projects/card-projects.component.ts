@@ -24,7 +24,7 @@ export class CardProjectsComponent {
   }
 
   ngOnInit(){
-    console.log(this.dinamicClass);
+    // console.log(this.dinamicClass);
   }
 
   toggleBigCard() {
