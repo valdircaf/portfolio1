@@ -1,7 +1,7 @@
 .container-fluid{
     border: 1px solid #FFF;
     /* background-color: #0a0a0a; */
-    height: 80vh;
+    min-height: 80vh;
     border-radius: 10px;
     background-color: #0b0b0b76;
     
